@@ -1,6 +1,4 @@
-import 'package:air_tasker/home_screen_web.dart';
-import 'package:dropdown_search/dropdown_search.dart';
-import 'package:air_tasker/sign_up.dart';
+import 'package:air_tasker/views/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class WebAuthDropdown extends StatefulWidget {

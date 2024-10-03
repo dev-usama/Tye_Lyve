@@ -13,6 +13,8 @@ dependencies:
   provider: ^6.0.0
   flutter_svg: ^2.0.10+1
   dropdown_search: ^6.0.1
+  font_awesome_flutter: ^10.7.0
+  cached_network_image: ^3.4.1
 
 
 dev_dependencies:
@@ -23,6 +25,3 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets\images\google_logo.jpg
-    - assets\images\teamwork.jpg
-    - assets\images\teamwork_web.jpeg

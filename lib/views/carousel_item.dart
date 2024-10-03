@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class MobileCarouselItem extends StatelessWidget {
@@ -9,7 +10,8 @@ class MobileCarouselItem extends StatelessWidget {
     return Stack(
       fit: StackFit.expand,
       children: [
-        Image.asset(path,
+        CachedNetworkImage(
+            imageUrl: path,
             fit: BoxFit.cover,
             color: const Color.fromARGB(255, 157, 146, 146),
             colorBlendMode: BlendMode.modulate),

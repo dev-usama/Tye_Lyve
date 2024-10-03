@@ -1,4 +1,4 @@
-import 'package:air_tasker/sign_up.dart';
+import 'package:air_tasker/views/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class MobileAuthentication extends StatefulWidget {

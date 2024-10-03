@@ -1,4 +1,4 @@
-import 'package:air_tasker/carousel_item_01.dart';
+import 'package:air_tasker/views/carousel_item.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
