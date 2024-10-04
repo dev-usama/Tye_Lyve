@@ -23,7 +23,8 @@ class _MyAnimatorState extends State<MyAnimator>
   void initState() {
     super.initState();
     _animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 3));
+        AnimationController(vsync: this, duration: const Duration(seconds: 3))
+          ..repeat();
     _animationController.forward();
   }
 

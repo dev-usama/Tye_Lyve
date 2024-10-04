@@ -1,5 +1,6 @@
 import 'package:air_tasker/views/sign_up.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class WebAuthDropdown extends StatefulWidget {
   const WebAuthDropdown({super.key});
@@ -133,10 +134,10 @@ class _WebAuthDropdownState extends State<WebAuthDropdown> {
                 "CONTINUE WITH GOOGLE",
                 style: TextStyle(fontSize: 13),
               ),
-              icon: Image.asset(
-                "assets\\images\\google_logo.jpg",
-                width: 20,
-                height: 20,
+              icon: const FaIcon(
+                FontAwesomeIcons.google,
+                size: 20,
+                color: Colors.blueAccent,
               ),
             ),
           ),
@@ -258,10 +259,10 @@ class TaskDropdown extends StatelessWidget {
                 "CONTINUE WITH GOOGLE",
                 style: TextStyle(fontSize: 13),
               ),
-              icon: Image.asset(
-                "assets\\images\\google_logo.jpg",
-                width: 20,
-                height: 20,
+              icon: const FaIcon(
+                FontAwesomeIcons.google,
+                size: 20,
+                color: Colors.blueAccent,
               ),
             ),
           ),

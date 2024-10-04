@@ -6,10 +6,10 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 void main() {
   runApp(LayoutBuilder(builder: (context, constraints) {
     if (!kIsWeb && constraints.maxWidth < 600) {
-      return MaterialApp(
+      return const MaterialApp(
           debugShowCheckedModeBanner: false, home: HomeScreenMobile());
     } else {
-      return MaterialApp(
+      return const MaterialApp(
           debugShowCheckedModeBanner: false, home: HomeScreenWeb());
     }
   }));

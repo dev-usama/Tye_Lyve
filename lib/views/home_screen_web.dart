@@ -1,9 +1,10 @@
 import 'package:air_tasker/views/animation_02.dart';
 import 'package:air_tasker/views/animation_03.dart';
-import 'package:air_tasker/views/animation_layout.dart';
 import 'package:air_tasker/views/carousel_item.dart';
 import 'package:air_tasker/views/my_card.dart';
 import 'package:air_tasker/views/newsletter.dart';
+import 'package:air_tasker/views/scrolling_video.dart';
+import 'package:air_tasker/views/testimonials.dart';
 import 'package:air_tasker/views/web_auth_dropdown.dart';
 import 'package:air_tasker/views/web_card.dart';
 import 'package:air_tasker/views/web_footer.dart';
@@ -68,7 +69,7 @@ class HomeScreenWeb extends StatelessWidget {
           ),
 
           // Animation 01
-          Animation01(),
+          const Animation01(),
 
           // Animation 02
           Animation02(),
@@ -179,6 +180,7 @@ class HomeScreenWeb extends StatelessWidget {
           ),
 
           // Publish ur first task with video
+          MyVideoPlayer(),
 
           // Discover powerful tools
           Padding(
@@ -299,6 +301,7 @@ class HomeScreenWeb extends StatelessWidget {
               ),
             ),
           ),
+          Testimonials(),
 
           // Post your task for free
           Padding(

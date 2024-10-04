@@ -1,5 +1,6 @@
 import 'package:air_tasker/views/sign_up.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MobileAuthentication extends StatefulWidget {
   const MobileAuthentication({super.key});
@@ -112,10 +113,10 @@ class _MobileAuthenticationState extends State<MobileAuthentication> {
                 "CONTINUE WITH GOOGLE",
                 style: TextStyle(fontSize: 13),
               ),
-              icon: Image.asset(
-                "assets\\images\\google_logo.jpg",
-                width: 20,
-                height: 20,
+              icon: const FaIcon(
+                FontAwesomeIcons.google,
+                size: 20,
+                color: Colors.blueAccent,
               ),
             ),
           ),
