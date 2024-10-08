@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class MobileCarouselItem extends StatelessWidget {
-  MobileCarouselItem(this.path, {super.key});
+  const MobileCarouselItem(this.path, {super.key});
 
   final String path;
   @override
@@ -41,7 +41,7 @@ class MobileCarouselItem extends StatelessWidget {
                 "Welcome to your go-to platform for freelancers and clients alike. Discover opportunities, showcase your skills, and bring your projects to life today!",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: MediaQuery.of(context).size.width < 650 ? 12 : 16,
+                  fontSize: MediaQuery.of(context).size.width < 650 ? 14 : 16,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),

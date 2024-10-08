@@ -5,11 +5,11 @@ class WebSignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
 
-    final TextEditingController _nameController = TextEditingController();
-    final TextEditingController _emailController = TextEditingController();
-    final TextEditingController _passwordController = TextEditingController();
+    final TextEditingController nameController = TextEditingController();
+    final TextEditingController emailController = TextEditingController();
+    final TextEditingController passwordController = TextEditingController();
 
     return Scaffold(
       appBar: AppBar(
@@ -19,11 +19,11 @@ class WebSignUp extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
-          key: _formKey,
+          key: formKey,
           child: Column(
             children: <Widget>[
               TextFormField(
-                controller: _nameController,
+                controller: nameController,
                 decoration: const InputDecoration(labelText: 'Name'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -33,8 +33,8 @@ class WebSignUp extends StatelessWidget {
                 },
               ),
               TextFormField(
-                controller: _emailController,
-                decoration: InputDecoration(labelText: 'Email'),
+                controller: emailController,
+                decoration: const InputDecoration(labelText: 'Email'),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -46,7 +46,7 @@ class WebSignUp extends StatelessWidget {
                 },
               ),
               TextFormField(
-                controller: _passwordController,
+                controller: passwordController,
                 decoration: const InputDecoration(labelText: 'Password'),
                 obscureText: true,
                 validator: (value) {
@@ -61,14 +61,14 @@ class WebSignUp extends StatelessWidget {
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  if (_formKey.currentState!.validate()) {
+                  if (formKey.currentState!.validate()) {
                     // Process the sign-up
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Signing Up...')),
+                      const SnackBar(content: Text('Signing Up...')),
                     );
                   }
                 },
-                child: Text('Sign Up'),
+                child: const Text('Sign Up'),
               ),
             ],
           ),

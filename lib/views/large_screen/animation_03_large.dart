@@ -7,7 +7,7 @@ class Potential extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 500,
       width: MediaQuery.of(context).size.width * 0.4,
       child: Column(
@@ -61,7 +61,7 @@ class Potential extends StatelessWidget {
                                       Radius.circular(
                                           10)), // Makes the border square
                                 ),
-                                fixedSize: Size(120, 30),
+                                fixedSize: const Size(120, 30),
                                 backgroundColor: Colors.blue,
                                 foregroundColor: Colors.white,
                               ),
@@ -133,8 +133,8 @@ class Animation03 extends StatelessWidget {
           child: CachedNetworkImage(
             imageUrl:
                 "https://plus.unsplash.com/premium_photo-1669904022334-e40da006a0a3?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            placeholder: (context, url) => CircularProgressIndicator(),
-            errorWidget: (context, url, error) => Icon(Icons.error),
+            placeholder: (context, url) => const CircularProgressIndicator(),
+            errorWidget: (context, url, error) => const Icon(Icons.error),
           ),
         ),
       )

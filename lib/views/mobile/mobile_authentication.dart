@@ -1,4 +1,4 @@
-import 'package:air_tasker/views/sign_up.dart';
+import 'package:air_tasker/views/large_screen/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -21,7 +21,7 @@ class _MobileAuthenticationState extends State<MobileAuthentication> {
         menuChildren: [
           TextButton.icon(
             style: TextButton.styleFrom(
-              padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
+              padding: const EdgeInsets.fromLTRB(50, 20, 50, 20),
               foregroundColor: Colors.black,
             ),
             onPressed: () {
@@ -33,12 +33,12 @@ class _MobileAuthenticationState extends State<MobileAuthentication> {
           ),
           Center(
               child: ListTile(
-            contentPadding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+            contentPadding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
             onTap: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => WebSignUp(),
+                    builder: (context) => const WebSignUp(),
                   ));
             },
             leading: const Icon(Icons.person_outline),
@@ -51,7 +51,7 @@ class _MobileAuthenticationState extends State<MobileAuthentication> {
           )),
           Center(
               child: ListTile(
-            contentPadding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+            contentPadding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
             onTap: () {},
             leading: const Icon(Icons.login),
             title: const Text(

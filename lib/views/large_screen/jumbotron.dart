@@ -5,36 +5,38 @@ class MyJumbotron extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(20),
-      child: const Column(
+      child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'Empower',
             style: TextStyle(
-              fontSize: 16,
+              fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
           ),
           Text(
             'Unlock Your Freelancing Potential Today!',
+            textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 32,
+              fontSize: width < 600 ? 24 : 32,
               fontWeight: FontWeight.bold,
             ),
           ),
           SizedBox(height: 10),
-          Text(
-            'Create a standout profile that showcases your skills and experience',
-            style: TextStyle(fontSize: 16, color: Colors.grey),
-          ),
-          Text(
-            'Early search for jobs that match your expertise and interests',
-            style: TextStyle(fontSize: 16, color: Colors.grey),
-          ),
+          SizedBox(
+            width: width < 600 ? width * 0.8 : width * 0.4,
+            child: const Text(
+              'Create a standout profile that showcases your skills and experience Early search for jobs that match your expertise and interests',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 16, color: Colors.grey),
+            ),
+          )
         ],
       ),
     );

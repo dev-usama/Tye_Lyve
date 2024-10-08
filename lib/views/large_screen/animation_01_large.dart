@@ -24,10 +24,10 @@ class _ConnectQFState extends State<ConnectQF>
   Widget build(BuildContext context) {
     return AnimatedBuilder(
         animation: _animationController,
-        child: Container(
+        child: SizedBox(
           height: 450,
           width: MediaQuery.of(context).size.width * 0.4,
-          child: Column(
+          child: const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -47,7 +47,7 @@ class _ConnectQFState extends State<ConnectQF>
                   )
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 50,
                 width: 50,
               ),
@@ -102,9 +102,11 @@ class _ConnectQFState extends State<ConnectQF>
           ),
         ),
         builder: (context, child) => SlideTransition(
-              position: Tween(begin: Offset(-1, 0), end: Offset(0, 0)).animate(
-                  CurvedAnimation(
-                      parent: _animationController, curve: Curves.easeInOut)),
+              position:
+                  Tween(begin: const Offset(-1, 0), end: const Offset(0, 0))
+                      .animate(CurvedAnimation(
+                          parent: _animationController,
+                          curve: Curves.easeInOut)),
               child: child,
             ));
   }
@@ -138,13 +140,15 @@ class _Connect2 extends State<Connect2> with SingleTickerProviderStateMixin {
             child: CachedNetworkImage(
               imageUrl:
                   "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-              placeholder: (context, url) => CircularProgressIndicator(),
-              errorWidget: (context, url, error) => Icon(Icons.error),
+              placeholder: (context, url) => const CircularProgressIndicator(),
+              errorWidget: (context, url, error) => const Icon(Icons.error),
             )),
         builder: (context, child) => SlideTransition(
-              position: Tween(begin: Offset(1, 0), end: Offset(0, 0)).animate(
-                  CurvedAnimation(
-                      parent: _animationController, curve: Curves.easeInOut)),
+              position:
+                  Tween(begin: const Offset(1, 0), end: const Offset(0, 0))
+                      .animate(CurvedAnimation(
+                          parent: _animationController,
+                          curve: Curves.easeInOut)),
               child: child,
             ));
   }
@@ -155,8 +159,8 @@ class Animation01 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(60),
+    return const Padding(
+      padding: EdgeInsets.all(60),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [ConnectQF(), Connect2()],

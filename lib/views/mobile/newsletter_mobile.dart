@@ -1,14 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-class MyNewsletter extends StatefulWidget {
-  const MyNewsletter({super.key});
+class MyNewsletter2 extends StatefulWidget {
+  const MyNewsletter2({super.key});
 
   @override
-  State<MyNewsletter> createState() => _MyNewsletterState();
+  State<MyNewsletter2> createState() => _MyNewsletter2State();
 }
 
-class _MyNewsletterState extends State<MyNewsletter> {
+class _MyNewsletter2State extends State<MyNewsletter2> {
   final Key _formKey = GlobalKey<FormState>();
 
   @override
@@ -18,29 +18,32 @@ class _MyNewsletterState extends State<MyNewsletter> {
         CachedNetworkImage(
           imageUrl:
               "https://plus.unsplash.com/premium_photo-1669324357471-e33e71e3f3d8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          height: MediaQuery.of(context).size.width * 0.8,
           fit: BoxFit.cover,
-          height: 350,
           colorBlendMode: BlendMode.multiply,
           color: const Color.fromARGB(150, 33, 149, 243),
-          width: double.infinity,
         ),
         Container(
-          padding: EdgeInsets.all(50),
-          height: 350,
+          height: MediaQuery.of(context).size.width * 0.8,
+          width: double.infinity,
+          padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "Stay Updated with Our Newsletter",
-                style: TextStyle(fontSize: 32, color: Colors.white),
+                style: TextStyle(
+                    fontSize: 24,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
               ),
-              Text(
+              const Text(
                 "Join our newsletter for the latest updates, opportunities, and tips tailored for freelancers.",
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.white, fontSize: 12),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
                 width: 20,
               ),
@@ -51,13 +54,15 @@ class _MyNewsletterState extends State<MyNewsletter> {
                       Row(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          Container(
-                            width: 300,
-                            height: 50,
+                          Expanded(
                             child: TextFormField(
-                              style: TextStyle(color: Colors.white),
+                              style: const TextStyle(
+                                  color: Colors.white, fontSize: 12),
                               decoration: const InputDecoration(
-                                  label: Text("You@email.com"),
+                                  label: Text(
+                                    "You@email.com",
+                                    style: TextStyle(fontSize: 12),
+                                  ),
                                   fillColor: Colors.white,
                                   filled: true),
                               validator: (value) {
@@ -68,21 +73,21 @@ class _MyNewsletterState extends State<MyNewsletter> {
                               },
                             ),
                           ),
-                          SizedBox(
-                            height: 20,
-                            width: 20,
-                          ),
                           ElevatedButton(
                             onPressed: () {},
                             style: TextButton.styleFrom(
                                 backgroundColor: Colors.black,
                                 foregroundColor: Colors.white),
-                            child: Text("Submit"),
+                            child: const Text("Submit"),
                           ),
                         ],
-                      ),
+                      )
                     ],
-                  ))
+                  )),
+              const Text(
+                "By clicking Join Now, you agree to our Terms and Conditions.",
+                style: TextStyle(color: Colors.white, fontSize: 9),
+              )
             ],
           ),
         )

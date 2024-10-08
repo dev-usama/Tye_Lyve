@@ -1,11 +1,10 @@
-import 'package:air_tasker/views/home_screen_web.dart';
+import 'package:air_tasker/views/large_screen/home_screen_web.dart';
 import 'package:flutter/material.dart';
-import 'package:air_tasker/views/home_screen_mobile.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:air_tasker/views/mobile/home_screen_mobile.dart';
 
 void main() {
   runApp(LayoutBuilder(builder: (context, constraints) {
-    if (!kIsWeb && constraints.maxWidth < 600) {
+    if (constraints.maxWidth < 600) {
       return const MaterialApp(
           debugShowCheckedModeBanner: false, home: HomeScreenMobile());
     } else {

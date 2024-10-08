@@ -8,7 +8,7 @@ class MobileCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
-      items: [
+      items: const [
         MobileCarouselItem("assets\\images\\teamwork.jpg"),
         MobileCarouselItem("assets\\images\\google_logo.jpg")
       ],

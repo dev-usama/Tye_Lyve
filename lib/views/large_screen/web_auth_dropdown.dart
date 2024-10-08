@@ -1,4 +1,4 @@
-import 'package:air_tasker/views/sign_up.dart';
+import 'package:air_tasker/views/large_screen/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -42,7 +42,7 @@ class _WebAuthDropdownState extends State<WebAuthDropdown> {
         menuChildren: [
           TextButton.icon(
             style: TextButton.styleFrom(
-              padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
+              padding: const EdgeInsets.fromLTRB(50, 20, 50, 20),
               foregroundColor: Colors.black,
             ),
             onPressed: () {
@@ -54,12 +54,12 @@ class _WebAuthDropdownState extends State<WebAuthDropdown> {
           ),
           Center(
               child: ListTile(
-            contentPadding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+            contentPadding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
             onTap: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => WebSignUp(),
+                    builder: (context) => const WebSignUp(),
                   ));
             },
             leading: const Icon(Icons.person_outline),
@@ -72,7 +72,7 @@ class _WebAuthDropdownState extends State<WebAuthDropdown> {
           )),
           Center(
               child: ListTile(
-            contentPadding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+            contentPadding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
             onTap: () {},
             leading: const Icon(Icons.login),
             title: const Text(
@@ -163,11 +163,14 @@ class TaskDropdown extends StatelessWidget {
               foregroundColor: Colors.white,
               backgroundColor: Colors.blue,
             ),
-            child: const Text("Post a task")),
+            child: const Text(
+              "Post a task",
+              style: TextStyle(fontSize: 12),
+            )),
         menuChildren: [
           TextButton.icon(
             style: TextButton.styleFrom(
-              padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
+              padding: const EdgeInsets.fromLTRB(50, 20, 50, 20),
               foregroundColor: Colors.black,
             ),
             onPressed: () {
@@ -179,12 +182,12 @@ class TaskDropdown extends StatelessWidget {
           ),
           Center(
               child: ListTile(
-            contentPadding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+            contentPadding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
             onTap: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => WebSignUp(),
+                    builder: (context) => const WebSignUp(),
                   ));
             },
             leading: const Icon(Icons.person_outline),
@@ -197,7 +200,7 @@ class TaskDropdown extends StatelessWidget {
           )),
           Center(
               child: ListTile(
-            contentPadding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+            contentPadding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
             onTap: () {},
             leading: const Icon(Icons.login),
             title: const Text(
@@ -300,7 +303,7 @@ class ExploreDropdown extends StatelessWidget {
         menuChildren: [
           TextButton.icon(
             style: TextButton.styleFrom(
-              padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
+              padding: const EdgeInsets.fromLTRB(50, 20, 50, 20),
               foregroundColor: Colors.black,
             ),
             onPressed: () {
@@ -312,12 +315,12 @@ class ExploreDropdown extends StatelessWidget {
           ),
           Center(
               child: ListTile(
-            contentPadding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+            contentPadding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
             onTap: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => WebSignUp(),
+                    builder: (context) => const WebSignUp(),
                   ));
             },
             leading: const Icon(Icons.person_outline),
@@ -330,7 +333,7 @@ class ExploreDropdown extends StatelessWidget {
           )),
           Center(
               child: ListTile(
-            contentPadding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+            contentPadding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
             onTap: () {},
             leading: const Icon(Icons.login),
             title: const Text(

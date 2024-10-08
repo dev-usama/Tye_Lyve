@@ -1,17 +1,18 @@
-import 'package:air_tasker/views/animation_02.dart';
-import 'package:air_tasker/views/animation_03.dart';
+import 'package:air_tasker/views/large_screen/animation_02_large.dart';
+import 'package:air_tasker/views/large_screen/animation_03_large.dart';
 import 'package:air_tasker/views/carousel_item.dart';
-import 'package:air_tasker/views/my_card.dart';
-import 'package:air_tasker/views/newsletter.dart';
-import 'package:air_tasker/views/scrolling_video.dart';
-import 'package:air_tasker/views/testimonials.dart';
-import 'package:air_tasker/views/web_auth_dropdown.dart';
-import 'package:air_tasker/views/web_card.dart';
-import 'package:air_tasker/views/web_footer.dart';
+import 'package:air_tasker/views/large_screen/my_card.dart';
+import 'package:air_tasker/views/large_screen/newsletter.dart';
+import 'package:air_tasker/views/large_screen/scrolling_video_web.dart';
+import 'package:air_tasker/views/large_screen/sign_up.dart';
+import 'package:air_tasker/views/large_screen/testimonials.dart';
+import 'package:air_tasker/views/large_screen/web_auth_dropdown.dart';
+import 'package:air_tasker/views/large_screen/web_card.dart';
+import 'package:air_tasker/views/large_screen/web_footer.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:air_tasker/views/jumbotron.dart';
-import 'package:air_tasker/views/animation_01.dart';
+import 'package:air_tasker/views/large_screen/jumbotron.dart';
+import 'package:air_tasker/views/large_screen/animation_01_large.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 class HomeScreenWeb extends StatelessWidget {
@@ -21,8 +22,23 @@ class HomeScreenWeb extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 30.0),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => WebSignUp()));
+            },
+            child: CachedNetworkImage(
+              imageUrl: "assets\\images\\logo.jpeg",
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        leadingWidth: 150,
+        toolbarHeight: 50,
         actions: [
-          ExploreDropdown(),
+          const ExploreDropdown(),
           const SizedBox(
             width: 20,
           ),
@@ -38,11 +54,11 @@ class HomeScreenWeb extends StatelessWidget {
           const SizedBox(
             width: 20,
           ),
-          TaskDropdown(),
+          const TaskDropdown(),
           const SizedBox(
             width: 20,
           ),
-          WebAuthDropdown(),
+          const WebAuthDropdown(),
           const SizedBox(
             width: 80,
           )
@@ -53,7 +69,7 @@ class HomeScreenWeb extends StatelessWidget {
           // Slider
           CarouselSlider(
             items: [
-              MobileCarouselItem(
+              const MobileCarouselItem(
                   "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
               CachedNetworkImage(
                 imageUrl:
@@ -63,7 +79,7 @@ class HomeScreenWeb extends StatelessWidget {
               )
             ],
             options: CarouselOptions(
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.of(context).size.height * 0.9,
               viewportFraction: 1,
             ),
           ),
@@ -72,7 +88,7 @@ class HomeScreenWeb extends StatelessWidget {
           const Animation01(),
 
           // Animation 02
-          Animation02(),
+          const Animation02(),
 
           // Jumbotron
           const MyJumbotron(),
@@ -136,7 +152,7 @@ class HomeScreenWeb extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                 child: ElevatedButton(
                     onPressed: () {},
                     style: TextButton.styleFrom(
@@ -155,7 +171,7 @@ class HomeScreenWeb extends StatelessWidget {
                     )),
               ),
               Container(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                 child: OutlinedButton(
                     onPressed: () {},
                     style: TextButton.styleFrom(
@@ -174,17 +190,13 @@ class HomeScreenWeb extends StatelessWidget {
               )
             ],
           ),
-          const SizedBox(
-            height: 50,
-            width: 50,
-          ),
 
           // Publish ur first task with video
-          MyVideoPlayer(),
+          const MyVideoPlayer2(),
 
           // Discover powerful tools
           Padding(
-            padding: const EdgeInsets.all(50),
+            padding: const EdgeInsets.fromLTRB(50, 20, 50, 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -289,9 +301,9 @@ class HomeScreenWeb extends StatelessWidget {
           ),
 
           // Testimonials
-          Padding(
-            padding: const EdgeInsets.all(50.0),
-            child: const Center(
+          const Padding(
+            padding: EdgeInsets.all(50.0),
+            child: Center(
               child: Text(
                 "CHECK OUT WHAT OTHERS ARE ACCOMPLISHING",
                 style: TextStyle(
@@ -301,7 +313,13 @@ class HomeScreenWeb extends StatelessWidget {
               ),
             ),
           ),
-          Testimonials(),
+          Container(
+            padding: MediaQuery.of(context).size.width < 600
+                ? const EdgeInsets.all(20)
+                : const EdgeInsets.all(50),
+            color: Colors.grey,
+            child: const Testimonials(),
+          ),
 
           // Post your task for free
           Padding(
@@ -317,10 +335,10 @@ class HomeScreenWeb extends StatelessWidget {
           ),
 
           // Animation 3
-          Animation03(),
+          const Animation03(),
 
           // Newsletter
-          MyNewsletter(),
+          const MyNewsletter(),
 
           // Community
           Padding(
@@ -381,7 +399,7 @@ class HomeScreenWeb extends StatelessWidget {
           ),
 
           // Footer
-          WebFooter()
+          const WebFooter()
         ],
       ),
     );
