@@ -1,7 +1,6 @@
 import 'package:air_tasker/views/carousel_item.dart';
 import 'package:air_tasker/views/large_screen/my_card.dart';
 import 'package:air_tasker/views/mobile/scrolling_video.dart';
-import 'package:air_tasker/views/large_screen/testimonials.dart';
 import 'package:air_tasker/views/large_screen/web_auth_dropdown.dart';
 import 'package:air_tasker/views/large_screen/web_card.dart';
 import 'package:air_tasker/views/mobile/animation_01_mobile.dart';
@@ -15,7 +14,6 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:air_tasker/views/large_screen/jumbotron.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/services.dart';
 
 class HomeScreenMobile extends StatelessWidget {
   const HomeScreenMobile({super.key});

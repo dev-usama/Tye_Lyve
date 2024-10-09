@@ -21,6 +21,12 @@ class _ConnectQFState extends State<ConnectQF>
   }
 
   @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
         animation: _animationController,
@@ -128,6 +134,12 @@ class _Connect2 extends State<Connect2> with SingleTickerProviderStateMixin {
     _animationController =
         AnimationController(vsync: this, duration: const Duration(seconds: 4));
     _animationController.forward();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
   }
 
   @override

@@ -26,9 +26,9 @@ class _Testimonials2State extends State<Testimonials2>
 
   @override
   void dispose() {
-    super.dispose();
     _animationController.dispose();
     _scrollController.dispose();
+    super.dispose();
   }
 
   @override

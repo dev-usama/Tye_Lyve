@@ -81,9 +81,9 @@ class __ScrollVideoState extends State<_ScrollVideo>
 
   @override
   void dispose() {
-    super.dispose();
     _animationController1.dispose();
     _scrollController1.dispose();
+    super.dispose();
   }
 
   @override

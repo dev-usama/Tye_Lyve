@@ -29,6 +29,12 @@ class _MyAnimatorState extends State<MyAnimator>
   }
 
   @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
         animation: _animationController,

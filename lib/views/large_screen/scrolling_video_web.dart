@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
@@ -79,9 +78,9 @@ class __ScrollVideoState extends State<_ScrollVideo>
 
   @override
   void dispose() {
-    super.dispose();
     _animationController1.dispose();
     _scrollController1.dispose();
+    super.dispose();
   }
 
   @override
@@ -155,8 +154,8 @@ class __Video2State extends State<_Video2> {
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   @override
