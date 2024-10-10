@@ -1,4 +1,4 @@
-import 'package:air_tasker/views/large_screen/sign_up.dart';
+import 'package:air_tasker/views/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -26,7 +26,7 @@ class _MobileAuthenticationState extends State<MobileAuthentication> {
             ),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const WebSignUp()));
+                  MaterialPageRoute(builder: (context) => WebSignUp()));
             },
             label: const Text("Become a Freelancer"),
             icon: const Icon(Icons.account_circle_outlined),
@@ -38,7 +38,7 @@ class _MobileAuthenticationState extends State<MobileAuthentication> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const WebSignUp(),
+                    builder: (context) => WebSignUp(),
                   ));
             },
             leading: const Icon(Icons.person_outline),

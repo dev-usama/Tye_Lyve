@@ -13,11 +13,11 @@ class _MyVideoPlayerState extends State<MyVideoPlayer>
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+      padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Container(
+          SizedBox(
             width: MediaQuery.of(context).size.width * 0.8,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,10 +25,10 @@ class _MyVideoPlayerState extends State<MyVideoPlayer>
               children: [
                 const Text(
                   "Publish your first task in a matter of seconds",
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
                 const Text(
-                  "Save hours and get your tasks done",
+                  "\nSave hours and get your tasks done\n",
                   style: TextStyle(fontSize: 10, color: Colors.grey),
                 ),
                 const Text(
@@ -145,7 +145,7 @@ class __ScrollVideoState extends State<_ScrollVideo>
 }
 
 class _Video2 extends StatefulWidget {
-  const _Video2();
+  const _Video2({super.key});
 
   @override
   State<_Video2> createState() => __Video2State();
@@ -157,36 +157,33 @@ class __Video2State extends State<_Video2> {
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.networkUrl(Uri.parse(
-        'https://videos.pexels.com/video-files/2795168/2795168-uhd_1440_2560_25fps.mp4'))
+    _controller = VideoPlayerController.networkUrl(
+        Uri.parse('https://cdn.pixabay.com/video/2024/09/26/233382_tiny.mp4'))
       ..initialize().then((_) {
         setState(() {
           _isInitialized = true;
         });
       });
-    _controller.initialize();
     _controller.setLooping(true);
     _controller.play();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        border: Border.all(),
-        borderRadius: BorderRadius.circular(20),
+    return Center(
+      child: Container(
+        height: 200,
+        child: _isInitialized
+            ? VideoPlayer(_controller)
+            : const CircularProgressIndicator(),
       ),
-      height: 200,
-      child: _isInitialized
-          ? VideoPlayer(_controller)
-          : const CircularProgressIndicator(),
     );
   }
 }

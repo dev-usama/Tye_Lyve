@@ -103,51 +103,58 @@ class HomeScreenMobile extends StatelessWidget {
           const MyJumbotron(),
 
           // JOB SEARCH PAYMENT AND PROFESSIONAL NETWORK
-          const Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              MyCard(
-                  icon: Icon(
-                    Icons.work,
-                    color: Colors.blue,
-                    size: 48,
-                  ),
-                  heading: Text("Seamless Job Search Experience",
+          const Padding(
+            padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                MyCard(
+                    icon: Icon(
+                      Icons.work,
+                      color: Colors.blue,
+                      size: 48,
+                    ),
+                    heading: Text("Seamless Job Search Experience",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
+                    descrition: Text(
+                      "Find your next project with just a few clicks",
+                      style: TextStyle(fontSize: 10),
+                    )),
+                MyCard(
+                    icon: Icon(
+                      Icons.attach_money_outlined,
+                      color: Colors.blue,
+                      size: 48,
+                    ),
+                    heading: Text(
+                      "Secure Payment Protection",
+                      textAlign: TextAlign.center,
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  descrition: Text(
-                    "Find your next project with just a few clicks",
-                    style: TextStyle(fontSize: 10),
-                  )),
-              MyCard(
-                  icon: Icon(
-                    Icons.attach_money_outlined,
-                    color: Colors.blue,
-                    size: 48,
-                  ),
-                  heading: Text(
-                    "Secure Payment Protection",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  descrition: Text(
-                    "Rest easy knowing your payments are secure",
-                    style: TextStyle(fontSize: 10),
-                  )),
-              MyCard(
-                  icon: Icon(
-                    Icons.link,
-                    color: Colors.blue,
-                    size: 48,
-                  ),
-                  heading: Text("Build Your Professional Network",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  descrition: Text(
-                    "Connect with clients and other freelancers to grow your opportunities",
-                    style: TextStyle(fontSize: 10),
-                    textAlign: TextAlign.center,
-                  )),
-            ],
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    descrition: Text(
+                      "Rest easy knowing your payments are secure",
+                      style: TextStyle(fontSize: 10),
+                    )),
+                MyCard(
+                    icon: Icon(
+                      Icons.link,
+                      color: Colors.blue,
+                      size: 48,
+                    ),
+                    heading: Text("Build Your Professional Network",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
+                    descrition: Text(
+                      "Connect with clients and other freelancers to grow your opportunities",
+                      style: TextStyle(fontSize: 10),
+                      textAlign: TextAlign.center,
+                    )),
+              ],
+            ),
           ),
           const SizedBox(
             height: 50,
@@ -212,7 +219,7 @@ class HomeScreenMobile extends StatelessWidget {
               children: [
                 Text(
                   "Discover Powerful Tools for Clients to Streamline Your Freelance Projects",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
                 ),
                 Text(
                   "\nAs a client, you can easily post jobs that attract top talent. Manage your projects seamlessly with our intuitive dashboard, ensuring every detail is tracked. Plus, enjoy peace of mind with our secure payment system that protects your transactions",
@@ -224,13 +231,13 @@ class HomeScreenMobile extends StatelessWidget {
 
           // Post, manage, and secure
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
             child: Column(
               children: [
                 Mycard2(
                   icon: const Icon(
                     Icons.edit,
-                    size: 16,
+                    size: 22,
                     color: Colors.blue,
                   ),
                   heading: const Text(
@@ -254,7 +261,7 @@ class HomeScreenMobile extends StatelessWidget {
                 Mycard2(
                     icon: const Icon(
                       Icons.apps,
-                      size: 16,
+                      size: 22,
                       color: Colors.blue,
                     ),
                     heading: const Text(
@@ -277,7 +284,7 @@ class HomeScreenMobile extends StatelessWidget {
                 Mycard2(
                     icon: const Icon(
                       Icons.payment,
-                      size: 16,
+                      size: 22,
                       color: Colors.blue,
                     ),
                     heading: const Text(
@@ -304,7 +311,7 @@ class HomeScreenMobile extends StatelessWidget {
             child: Text(
               "CHECK OUT WHAT OTHERS ARE ACCOMPLISHING",
               style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 20,
                   color: Colors.blue,
                   fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,

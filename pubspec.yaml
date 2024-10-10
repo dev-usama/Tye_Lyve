@@ -17,6 +17,7 @@ dependencies:
   cached_network_image: ^3.4.1
   scroll_loop_auto_scroll: ^0.0.5
   video_player: ^2.9.2
+  http: ^1.2.2
 
 
 dev_dependencies:
@@ -30,3 +31,4 @@ flutter:
     - assets\images\google_logo.jpg
     - assets\images\profile_pic.jpg
     - assets\images\logo.jpeg
+    - assets/videos/video.mp4

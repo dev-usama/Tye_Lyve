@@ -17,9 +17,17 @@ class FooterMobile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                "Logo",
-                style: TextStyle(fontSize: 28, color: Colors.white),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 20),
+                child: GestureDetector(
+                  onTap: () {},
+                  child: SizedBox(
+                    height: 50,
+                    width: 150,
+                    child: Image.asset("assets/images/logo.jpeg",
+                        fit: BoxFit.cover),
+                  ),
+                ),
               ),
               const SizedBox(
                 width: 300,
@@ -28,25 +36,28 @@ class FooterMobile extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
               ),
-              const Text(
-                "Discover",
-                style: TextStyle(fontSize: 28, color: Colors.white),
+              const Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                child: const Text(
+                  "Discover",
+                  style: TextStyle(fontSize: 24, color: Colors.white),
+                ),
               ),
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "How it works",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "For business",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Earn money",
                       textAlign: TextAlign.start,
@@ -55,68 +66,71 @@ class FooterMobile extends StatelessWidget {
                         fontSize: 12,
                       ),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Side Hustle Calculator",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Search jobs",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Cost Guides",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Service Guides",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Comparison Guides",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Student Discount",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "New users FAQ",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     ))
               ]),
-              const Text(
-                "Company",
-                style: TextStyle(fontSize: 28, color: Colors.white),
+              const Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                child: const Text(
+                  "Company",
+                  style: TextStyle(fontSize: 24, color: Colors.white),
+                ),
               ),
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "About us",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Careers",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Media enquiries",
                       textAlign: TextAlign.start,
@@ -125,127 +139,133 @@ class FooterMobile extends StatelessWidget {
                         fontSize: 12,
                       ),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Community Guidelines",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Tasker Principles",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Terms and Conditions",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Blogs",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Contact us",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Privacy policy",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     )),
-                TextButton(
-                    onPressed: () {},
+                InkWell(
+                    onTap: () {},
                     child: const Text(
                       "Post a task",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     ))
               ]),
-              const Text(
-                "Existing Members",
-                style: TextStyle(fontSize: 28, color: Colors.white),
+              const Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                child: const Text(
+                  "Existing Members",
+                  style: TextStyle(fontSize: 24, color: Colors.white),
+                ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TextButton(
-                      onPressed: () {},
+                  InkWell(
+                      onTap: () {},
                       child: const Text(
                         "Browse tasks",
                         style: TextStyle(color: Colors.white, fontSize: 12),
                       )),
-                  TextButton(
-                      onPressed: () {},
+                  InkWell(
+                      onTap: () {},
                       child: const Text(
                         "Login",
                         style: TextStyle(color: Colors.white, fontSize: 12),
                       )),
-                  TextButton(
-                      onPressed: () {},
+                  InkWell(
+                      onTap: () {},
                       child: const Text(
                         "Support centre",
                         style: TextStyle(color: Colors.white, fontSize: 12),
                       ))
                 ],
               ),
-              const Text(
-                "Popular Categories",
-                style: TextStyle(fontSize: 28, color: Colors.white),
+              const Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                child: const Text(
+                  "Popular Categories",
+                  style: TextStyle(fontSize: 24, color: Colors.white),
+                ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TextButton(
-                      onPressed: () {},
+                  InkWell(
+                      onTap: () {},
                       child: const Text(
                         "Handyman Services",
                         style: TextStyle(color: Colors.white, fontSize: 12),
                       )),
-                  TextButton(
-                      onPressed: () {},
+                  InkWell(
+                      onTap: () {},
                       child: const Text(
                         "Cleaning Services",
                         style: TextStyle(color: Colors.white, fontSize: 12),
                       )),
-                  TextButton(
-                      onPressed: () {},
+                  InkWell(
+                      onTap: () {},
                       child: const Text(
                         "Delivery Services",
                         style: TextStyle(color: Colors.white, fontSize: 12),
                       )),
-                  TextButton(
-                      onPressed: () {},
+                  InkWell(
+                      onTap: () {},
                       child: const Text(
                         "Removalists",
                         style: TextStyle(color: Colors.white, fontSize: 12),
                       )),
-                  TextButton(
-                      onPressed: () {},
+                  InkWell(
+                      onTap: () {},
                       child: const Text(
                         "Gardening Services",
                         style: TextStyle(color: Colors.white, fontSize: 12),
                       )),
-                  TextButton(
-                      onPressed: () {},
+                  InkWell(
+                      onTap: () {},
                       child: const Text(
                         "Auto Electricians",
                         style: TextStyle(color: Colors.white, fontSize: 12),
                       )),
-                  TextButton(
-                      onPressed: () {},
+                  InkWell(
+                      onTap: () {},
                       child: const Text(
                         "Assembly Services",
                         style: TextStyle(color: Colors.white, fontSize: 12),
                       )),
-                  TextButton(
-                      onPressed: () {},
+                  InkWell(
+                      onTap: () {},
                       child: const Text(
                         "All Services",
                         style: TextStyle(color: Colors.white, fontSize: 12),
@@ -282,7 +302,8 @@ class FooterMobile extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         decoration: TextDecoration.underline,
-                        decorationColor: Colors.white),
+                        decorationColor: Colors.white,
+                        fontWeight: FontWeight.bold),
                   )),
               ElevatedButton.icon(
                   onPressed: () {},

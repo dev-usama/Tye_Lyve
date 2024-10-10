@@ -1,4 +1,4 @@
-import 'package:air_tasker/views/large_screen/sign_up.dart';
+import 'package:air_tasker/views/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -47,7 +47,7 @@ class _WebAuthDropdownState extends State<WebAuthDropdown> {
             ),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const WebSignUp()));
+                  MaterialPageRoute(builder: (context) => WebSignUp()));
             },
             label: const Text("Become a Freelancer"),
             icon: const Icon(Icons.account_circle_outlined),
@@ -59,7 +59,7 @@ class _WebAuthDropdownState extends State<WebAuthDropdown> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const WebSignUp(),
+                    builder: (context) => WebSignUp(),
                   ));
             },
             leading: const Icon(Icons.person_outline),
@@ -175,7 +175,7 @@ class TaskDropdown extends StatelessWidget {
             ),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const WebSignUp()));
+                  MaterialPageRoute(builder: (context) => WebSignUp()));
             },
             label: const Text("Become a Freelancer"),
             icon: const Icon(Icons.account_circle_outlined),
@@ -187,7 +187,7 @@ class TaskDropdown extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const WebSignUp(),
+                    builder: (context) => WebSignUp(),
                   ));
             },
             leading: const Icon(Icons.person_outline),
@@ -308,7 +308,7 @@ class ExploreDropdown extends StatelessWidget {
             ),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const WebSignUp()));
+                  MaterialPageRoute(builder: (context) => WebSignUp()));
             },
             label: const Text("Become a Freelancer"),
             icon: const Icon(Icons.account_circle_outlined),
@@ -320,7 +320,7 @@ class ExploreDropdown extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const WebSignUp(),
+                    builder: (context) => WebSignUp(),
                   ));
             },
             leading: const Icon(Icons.person_outline),

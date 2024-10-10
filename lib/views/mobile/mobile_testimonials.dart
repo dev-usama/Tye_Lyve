@@ -50,7 +50,7 @@ class _Testimonials2State extends State<Testimonials2>
             rating: 4,
             description: Text("Secure Payments"),
           ),
-          const SizedBox(width: 50, height: 50),
+          SizedBox(width: 50, height: 50),
           _Review2(
             path: "assets\\images\\google_logo.jpg",
             name: Text(
@@ -104,7 +104,7 @@ class _Review2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 400,
+      width: 450,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
           gradient: const LinearGradient(
@@ -113,9 +113,9 @@ class _Review2 extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        mainAxisSize: MainAxisSize.min,
         children: [
-          Expanded(
+          SizedBox(
+            width: 300,
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -129,20 +129,24 @@ class _Review2 extends StatelessWidget {
                       width: 50,
                     ),
                   ),
-                  Row(
-                    children: [name, const Text(" - "), profession],
+                  Expanded(
+                    child: Row(
+                      children: [name, const Text(" - "), profession],
+                    ),
                   ),
-                  Row(
-                    children: List.generate(rating, (index) {
-                      return const Icon(
-                        Icons.stars,
-                        color: Colors.yellow,
-                      );
-                    }),
+                  Expanded(
+                    child: Row(
+                      children: List.generate(rating, (index) {
+                        return const Icon(
+                          Icons.stars,
+                          color: Colors.yellow,
+                        );
+                      }),
+                    ),
                   )
                 ]),
           ),
-          description
+          SizedBox(width: 100, child: description)
         ],
       ),
     );

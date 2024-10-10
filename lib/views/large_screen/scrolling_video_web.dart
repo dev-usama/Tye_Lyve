@@ -161,14 +161,13 @@ class __Video2State extends State<_Video2> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.networkUrl(Uri.parse(
-        'https://videos.pexels.com/video-files/2795168/2795168-uhd_1440_2560_25fps.mp4'))
+    _controller = VideoPlayerController.networkUrl(
+        Uri.parse('https://cdn.pixabay.com/video/2024/09/26/233382_tiny.mp4'))
       ..initialize().then((_) {
         setState(() {
           _isInitialized = true;
         });
       });
-    _controller.initialize();
     _controller.setLooping(true);
     _controller.play();
   }
@@ -176,10 +175,6 @@ class __Video2State extends State<_Video2> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // decoration: BoxDecoration(
-      //   border: Border.all(),
-      //   borderRadius: BorderRadius.circular(20),
-      // ),
       height: 200,
       child: _isInitialized
           ? VideoPlayer(_controller)

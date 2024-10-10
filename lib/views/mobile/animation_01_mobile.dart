@@ -21,10 +21,16 @@ class _ConnectQF2State extends State<ConnectQF2>
   }
 
   @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
         animation: _animationController,
-        child: const Expanded(
+        child: const SizedBox(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
@@ -35,7 +41,7 @@ class _ConnectQF2State extends State<ConnectQF2>
                   Text(
                     "Unlock Your Potential: \nConnect with Quality Clients and Enjoy Flexible Work",
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -130,16 +136,21 @@ class _Connect2mobile extends State<Connect2mobile>
   }
 
   @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
         animation: _animationController,
-        child: Expanded(
-            child: CachedNetworkImage(
+        child: CachedNetworkImage(
           imageUrl:
               "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           placeholder: (context, url) => const CircularProgressIndicator(),
           errorWidget: (context, url, error) => const Icon(Icons.error),
-        )),
+        ),
         builder: (context, child) => SlideTransition(
               position:
                   Tween(begin: const Offset(1, 0), end: const Offset(0, 0))

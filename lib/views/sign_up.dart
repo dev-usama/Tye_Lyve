@@ -1,16 +1,37 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class WebSignUp extends StatelessWidget {
-  const WebSignUp({super.key});
+  WebSignUp({super.key});
+
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  Future<void> sendRequest() async {
+    final url = Uri.parse('http://127.0.0.1:5000/sign_up');
+
+    Map<String, String> userData = {
+      'name': nameController.text,
+      'email': emailController.text,
+      'password': passwordController.text
+    };
+
+    final response = await http.post(url,
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode(userData));
+
+    if (response.statusCode == 200) {
+      print('Success: ${response.body}');
+    } else {
+      print('Error: ${response.statusCode}');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     final formKey = GlobalKey<FormState>();
-
-    final TextEditingController nameController = TextEditingController();
-    final TextEditingController emailController = TextEditingController();
-    final TextEditingController passwordController = TextEditingController();
-
     return Scaffold(
       appBar: AppBar(
         title: const Text("Air tracker Sign Up"),
@@ -60,15 +81,8 @@ class WebSignUp extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {
-                  if (formKey.currentState!.validate()) {
-                    // Process the sign-up
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Signing Up...')),
-                    );
-                  }
-                },
-                child: const Text('Sign Up'),
+                onPressed: sendRequest,
+                child: const Text("SIGN UP"),
               ),
             ],
           ),

@@ -37,21 +37,23 @@ class _ConnectQFState extends State<ConnectQF>
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Unlock Your Potential: \nConnect with Quality Clients and Enjoy Flexible Work",
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Unlock Your Potential: \nConnect with Quality Clients and Enjoy Flexible Work",
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  Text(
-                    "As a freelancer, you deserve the freedom to choose your projects. Our platform connects you with high-quality clients, ensuring you can thrive in your career.",
-                    style: TextStyle(color: Colors.grey, fontSize: 16),
-                  )
-                ],
+                    Text(
+                      "As a freelancer, you deserve the freedom to choose your projects. Our platform connects you with high-quality clients, ensuring you can thrive in your career.",
+                      style: TextStyle(color: Colors.grey, fontSize: 16),
+                    )
+                  ],
+                ),
               ),
               SizedBox(
                 height: 50,

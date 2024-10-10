@@ -7,7 +7,7 @@ class TopFreelancer2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(
+    return const SizedBox(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
@@ -18,7 +18,7 @@ class TopFreelancer2 extends StatelessWidget {
               Text(
                 "Discover the Ultimate Platform for Connecting Clients with Top Freelancers",
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -94,13 +94,11 @@ class Animation02Mobile extends StatelessWidget {
         MyAnimator(
           Begin: const Offset(-1, 0),
           End: const Offset(0, 0),
-          animation_child: Expanded(
-            child: CachedNetworkImage(
-              imageUrl:
-                  "https://images.unsplash.com/photo-1713947504039-6ae85038dfd0?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-              placeholder: (context, url) => const CircularProgressIndicator(),
-              errorWidget: (context, url, error) => const Icon(Icons.error),
-            ),
+          animation_child: CachedNetworkImage(
+            imageUrl:
+                "https://images.unsplash.com/photo-1713947504039-6ae85038dfd0?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            placeholder: (context, url) => const CircularProgressIndicator(),
+            errorWidget: (context, url, error) => const Icon(Icons.error),
           ),
         )
       ]),

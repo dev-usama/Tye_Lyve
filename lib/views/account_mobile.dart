@@ -1,4 +1,4 @@
-import 'package:air_tasker/views/large_screen/sign_up.dart';
+import 'package:air_tasker/views/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class MAccountDropdown extends StatefulWidget {
@@ -21,8 +21,8 @@ class _MAccountDropdownState extends State<MAccountDropdown> {
     if (selected is String) {
       setState(() {
         if (selected == "1") {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const WebSignUp()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => WebSignUp()));
         }
       });
     }
@@ -38,7 +38,7 @@ class _MAccountDropdownState extends State<MAccountDropdown> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const WebSignUp()),
+                    MaterialPageRoute(builder: (context) => WebSignUp()),
                   );
                 },
                 icon: const Icon(Icons.account_circle),

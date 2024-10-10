@@ -4,7 +4,7 @@ import 'package:air_tasker/views/carousel_item.dart';
 import 'package:air_tasker/views/large_screen/my_card.dart';
 import 'package:air_tasker/views/large_screen/newsletter.dart';
 import 'package:air_tasker/views/large_screen/scrolling_video_web.dart';
-import 'package:air_tasker/views/large_screen/sign_up.dart';
+import 'package:air_tasker/views/sign_up.dart';
 import 'package:air_tasker/views/large_screen/testimonials.dart';
 import 'package:air_tasker/views/large_screen/web_auth_dropdown.dart';
 import 'package:air_tasker/views/large_screen/web_card.dart';
