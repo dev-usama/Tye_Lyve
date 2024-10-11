@@ -22,26 +22,33 @@ class _StartVideoState extends State<StartVideo> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset("assets/videos/video.mp4")
-      ..initialize().then((_) {
-        setState(() {
-          _isInitialized = true;
-          _controller.addListener(() {
-            if (_controller.value.position == _controller.value.duration) {
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ResponsiveLayout()));
-            }
+    try {
+      _controller = VideoPlayerController.asset("assets/videos/video.mp4")
+        ..initialize().then((_) {
+          setState(() {
+            _isInitialized = true;
+            _controller.addListener(() {
+              if (_controller.value.position == _controller.value.duration) {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ResponsiveLayout()));
+              }
+            });
           });
-          _controller.play();
         });
-      });
-    _controller.play();
+    } catch (e) {
+      print(e.toString());
+    }
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_isInitialized) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        _controller.play();
+      });
+    }
     return Center(
       child: _isInitialized
           ? AspectRatio(
